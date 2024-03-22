@@ -61,3 +61,27 @@ CREATE TABLE countrylanguage (
 -------------------------------------------------------------
 -- SELECT * FROM city WHERE countrycode = 'SMR' AND name != 'San Marino'
 -- It's Serravalle
+
+-------------------------------------------------------------
+-- Capital of San Marino
+-------------------------------------------------------------
+
+-- SELECT * FROM country WHERE name = 'San Marino'
+-- capital is 3171
+-- SELECT * FROM city WHERE id = 3171
+-- It's San Marino, which isn't surprising
+
+-------------------------------------------------------------
+-- Name of city in a country in South America that is similar to but ends differently from San Marino
+-------------------------------------------------------------
+-- SELECT * FROM city INNER JOIN country ON city.countrycode = country.code WHERE country.continent = 'South America' AND city.name LIKE 'San M%'
+-- San Miguel?
+-- SELECT * FROM country WHERE code = 'ARG'
+-- It's Argentina
+
+-------------------------------------------------------------
+-- So I'm off to add one to the population I find
+-- In a city of ninety-one thousand and now, eighty five.
+-------------------------------------------------------------
+-- SELECT * FROM city WHERE population = 91084
+-- It's Santa Monica! Yayyyyyy.
