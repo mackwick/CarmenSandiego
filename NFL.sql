@@ -58,4 +58,19 @@ Answer: $1,579,692.54
 -------------------------------------------------------------
 SELECT name, position FROM players WHERE salary > 10000000
 
+-------------------------------------------------------------
+-- 9. The player with the highest salary in the NFL
+-------------------------------------------------------------
+SELECT * FROM players ORDER BY salary DESC LIMIT 1
+answer: Peyton Manning
 
+-------------------------------------------------------------
+-- 10. The name and position of the first 100 players with the lowest salaries
+-------------------------------------------------------------
+SELECT * FROM players ORDER BY salary ASC LIMIT 100
+
+-------------------------------------------------------------
+-- 11. The average salary for a DE in the nfl
+-------------------------------------------------------------
+SELECT AVG(salary) FROM players WHERE position = 'DE'
+answer: $2,161,326.37
